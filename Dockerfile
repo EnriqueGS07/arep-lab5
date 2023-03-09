@@ -7,5 +7,5 @@ ENV PORT 6000
 COPY /target/classes /usrapp/bin/classes
 COPY /target/dependency /usrapp/bin/dependency
 
-CMD ["java","-cp","./classes:./dependency/*","com.containerlab.labarep5.Labarep5Application"]
+CMD ["java","-cp","./classes:./dependency/*","com.containerlab.labarep5.RoundRobin"]
 

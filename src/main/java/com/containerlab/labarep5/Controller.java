@@ -31,6 +31,7 @@ public class Controller {
     public void createConnection(){
         client = new MongoClient(url);
         db = client.getDatabase("admin");
+        db.createCollection("database1");
         collec = db.getCollection("database1");
 
     }

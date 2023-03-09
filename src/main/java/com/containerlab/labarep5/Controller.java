@@ -24,14 +24,15 @@ import com.mongodb.client.MongoDatabase;
 public class Controller {
 
     private MongoClient client = null;
-    private String url = "localhost:27017";
+    private String url = "192.168.20.41:27017";
     private MongoDatabase db = null;
     private MongoCollection<Document> collec;
 
     public void createConnection(){
+        
         client = new MongoClient(url);
         db = client.getDatabase("admin");
-        db.createCollection("database1");
+        // db.createCollection("database1");
         collec = db.getCollection("database1");
 
     }

@@ -24,7 +24,7 @@ import com.mongodb.client.MongoDatabase;
 public class Controller {
 
     private MongoClient client = null;
-    private String url = "192.168.20.41:27017";
+    private String url = "ec2-23-20-193-97.compute-1.amazonaws.com:27017";
     private MongoDatabase db = null;
     private MongoCollection<Document> collec;
 
@@ -32,7 +32,6 @@ public class Controller {
         
         client = new MongoClient(url);
         db = client.getDatabase("admin");
-        // db.createCollection("database1");
         collec = db.getCollection("database1");
 
     }

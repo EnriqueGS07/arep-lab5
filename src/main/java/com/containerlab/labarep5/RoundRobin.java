@@ -25,8 +25,8 @@ public class RoundRobin {
     public static void main(String[] args) {
         port(getPort());
         staticFiles.location("/");
-        get("/", (req, res) -> {
-            URL url = new URL(roundrobin("http://192.168.20.41"));
+        get("/logs", (req, res) -> {
+            URL url = new URL(roundrobin("http://ec2-23-20-193-97.compute-1.amazonaws.com"));
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.connect();
@@ -43,8 +43,8 @@ public class RoundRobin {
             conn.disconnect();
             return response;
         });
-        post("/", (req,res) -> {
-            URL url = new URL(roundrobin("http://192.168.20.41"));
+        post("/logs", (req,res) -> {
+            URL url = new URL(roundrobin("http://ec2-23-20-193-97.compute-1.amazonaws.com"));
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("POST");
             conn.setDoOutput(true);

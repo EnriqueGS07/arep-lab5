@@ -6,14 +6,19 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>logs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>
     <div>
         <h1>Logs</h1>
         <input id="input" type="text">
-        <div id="log-cont">
-            
+        <div>
+            <ul id="log-cont"></ul>
+
         </div>
+        <button onclick="apiclient.postLogs()">Crear log</button>
+        <button onclick="apiclient.getLogs()">Mostrar log</button>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
